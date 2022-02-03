@@ -1,202 +1,87 @@
-# Segmentação de clientes
-Projeto de data science(clusterização) - Segmentando clientes para um hipermercado.
+# All-In - Segmentação de Clientes
 
-**Problema de négocio:** A empresa de hipermercados "Santa Teresa", que é uma empresa que vende dos mais diversos itens, além de um supermercado normal você pode comprar até ouro, deseja segmentar seus clientes e entender seus hábitos, para dessa forma aumentar as vendas, conquistar novos clientes e não perder os atuais. Foi disponibilizado pela empresa um dataset sobre 2240 clientes e algumas de suas características, cabe a nós cientistas de dados, analisar, entender e aplicar ferramentas sobre esses dados afim de gerar informações úteis e agregar ao negócio.
+A empresa All In é uma empresa de franquias Delicatesses. Delicatesse é uma loja que vende comidas finas e iguarias. Especializada em comidas exóticas, raras e de difícil preparo.
+Os principais produtos da All In são vinhos, carnes, certos peixes, doces e guloseimas e o diferencial, você pode comprar certas peças de ouro.
 
-![alt text](https://media.jornaljurid.com.br/cache/77/49/7749a1e3bef366aa856eb9a862862743.jpg)
+# Problema de Negócio
 
-## Resumo  e conclusões
+Em pouco mais de 2 anos a empresa adquiriu uma certa base de clientes, e por esta ser uma base de clientes dificil de se achar, seria extremamente vantajoso para a empresa conhecer melhor seus clientes afim de rete-los.
 
-### Informações sobre os clientes em geral:
-    
-- Média de ganho: Entre 30.600 e 73.400 (Em dólares por ano).
-- Ultima compra: Entre 20 e 78 dias.
-- Idade média: Entre 33 e 57 anos.
-- Média de filhos: 1.
-- Média de gasto: \$600.00
-- Média de tempo como cliente: Entre 280 e 744 dias.
-- A maioria massante é de pessoas graduadas.
-- Mais da metade dos clientes esta em um relacionamento.
-- A maior parte dos clientes tem entre 30 e 60 anos.
+A franquia All In nos contratou para auxiliarmos a equipe de marketing em sua missão de elevar a retenção de clientes.
 
-### Hábitos de consumo dos grupos criados
+Uma maneira eficiente e comprovada de melhorar a retenção de clientes é agrupa-los, pois com os clientes agrupados podemos entender melhor seu comportamento, suas necessidades e o principal, melhoramos significativamente nossa comunição com eles através de um contato mais focado.
 
-**Grupo 1 - Poder aquisitivo**
+# Solução Proposta
 
-Habitos de consumo dos grupos por poder aquisitivo:
-    
-    - Baixo:
-        Vinho: 33%
-        Frutas: 6%
-        Carne: 27%
-        Frutos do mar: 9%
-        Doces: 6%
-        Ouro: 19%
-        
-        Compras pela internet: 37%
-        Compras pelo catálogo: 9%
-        Compras na loja: 53%
-        Compras com desconto: 37%
-        
-     - Médio:
-        Vinho: 58%
-        Frutas: 4%
-        Carne: 20%
-        Frutos do mar: 5%
-        Doces: 4%
-        Ouro: 10%
-        
-        Compras pela internet: 36%
-        Compras pelo catálogo: 17%
-        Compras na loja: 47%
-        Compras com desconto: 25%
-        
-     - Alto:
-        Vinho: 49%
-        Frutas: 4%
-        Carne: 30%
-        Frutos do mar: 6%
-        Doces: 5%
-        Ouro: 6%
-        
-        Compras pela internet: 29%
-        Compras pelo catálogo: 28%
-        Compras na loja: 44%
-        Compras com desconto: 9%
-        
-**Grupo 2 - Tempo como cliente**
+Existem diversos métodos para se agrupar uma base de clientes e entre eles existe um método muito simples e muito poderoso, o modelo RFM. O modelo RFM consiste em usar 3 infomações para agrupar nossos clientes, a recência, a frequência e o valor monetário. Mas o que são estas informações?
 
-Habitos de consumo dos grupos por tempo como cliente:
-    
-    - Clientes novos:
-        Vinho: 49%
-        Frutas: 5%
-        Carne: 29%
-        Frutos do mar: 6%
-        Doces: 5%
-        Ouro: 7%
-        
-        Compras pela internet: 31%
-        Compras pelo catálogo: 21%
-        Compras na loja: 48%
-        Compras com desconto: 17%
-        
-     - Clientes frequentes:
-        Vinho: 50%
-        Frutas: 4%
-        Carne: 28%
-        Frutos do mar: 6%
-        Doces: 5%
-        Ouro: 8%
-        
-        Compras pela internet: 33%
-        Compras pelo catálogo: 21%
-        Compras na loja: 46%
-        Compras com desconto: 18%
-        
-     - Clientes experientes:
-        Vinho: 51%
-        Frutas: 4%
-        Carne: 26%
-        Frutos do mar: 6%
-        Doces: 4%
-        Ouro: 7%
-        
-        Compras pela internet: 34%
-        Compras pelo catálogo: 21%
-        Compras na loja: 45%
-        Compras com desconto: 20%
-        
-**Grupo 3 - Total gasto**
+**1. Recency (recência):** De modo geral, a recência indica há quanto tempo atrás o seu cliente executou uma ação desejada, no nosso caso, a ultima compra.
 
-Habitos de consumo dos grupos por gasto:
-    
-    - Clientes que gastam pouco:
-        Vinho: 35%
-        Frutas: 6%
-        Carne: 24%
-        Frutos do mar: 9%
-        Doces: 7%
-        Ouro: 19%
-        
-        Compras pela internet: 34%
-        Compras pelo catálogo: 6%
-        Compras na loja: 60%
-        Compras com desconto: 38%
-        
-     - Clientes que gastam um valor médio:
-        Vinho: 54%
-        Frutas: 4%
-        Carne: 21%
-        Frutos do mar: 6%
-        Doces: 4%
-        Ouro: 11%
-        
-        Compras pela internet: 39%	
-        Compras pelo catálogo: 16%
-        Compras na loja: 46%
-        Compras com desconto: 25%
-        
-     - Clientes que gastam muito:
-        Vinho: 50%
-        Frutas: 4%
-        Carne: 30%
-        Frutos do mar: 6%
-        Doces: 4%
-        Ouro: 6%
-        
-        Compras pela internet: 28%
-        Compras pelo catálogo: 28%
-        Compras na loja: 43%
-        Compras com desconto: 10%
-        
-### Clusters
 
-Pelo observado podemos separar os nossos clusters da seguinte maneira:
+**2. Frequency (frequência):** A frequência, por sua vez, indica quantas vezes ele repete essa ação em um determinado período de tempo, no nosso, em toda sua vida como cliente.
 
-**Precisam de atenção:** Base de clientes simples mas que não compram há muito tempo, clientes que precisam de atenção!
 
-- Tempo como cliente: A um tempo médio.
-- Gasto: Baixo.
-- Ultima compra: Há bastante tempo.
-- Poder aquisitivo: Baixo.
+**3. Monetary (Valor monetário)**: O valor monetário, por fim, indica qual é o valor agregado por esse cliente, em nosso caso, nos não iremos utilzar esta ultima informação, pois ela esta altamente relacionada com a frequência.
 
-**Clientes mais simples:**  Clientes mais simples e fieis, clientes base que precisam apenas serem mantidos!
-    
-- Tempo como cliente: A um tempo médio.
-- Gasto: Baixo.
-- Ultima compra: Recentemente.
-- Poder aquisitivo: Baixo.
 
-**Melhores Clientes:** Melhores clientes, mas não compram a um tempo, clientes importantes que precisam ser mantidos e tragos de volta!
+# Modelo RFM
 
-- Tempo como cliente: A bastante tempo.
-- Gasto: Alto.
-- Ultima compra: Há bastante tempo.
-- Poder aquisitivo: Alto.
+Após buscarmos as recencia, a frequência e o valor monetário, é hora de atribuir uma pontuação — ou score, em inglês. A pontuação varia de 1 a 5, onde quanto maior esse número, melhor. Essa pontuação é atribuída para cada uma das letras, ou seja, R terá uma pontuação, F terá outra e M também, podendo ser iguais ou não — por exemplo, todas as letras podem receber uma pontuação 5.
 
-**Clientes com potêncial:** Potenciais futuros grandes clientes, possuem as mesmas caracteristicas dos melhores clientes, mas são recentes.
 
-- Tempo como cliente: Recente.
-- Gasto: Alto.
-- Ultima compra: Recente.
-- Poder aquisitivo: Alto.
+Tendo as três pontuações de R, F e M do cliente, é hora de classificá-lo dentro de uma de 11 categorias chamadas de Segmento, que podem ir desde Champion — um cliente que comprou muitas vezes, há poucos dias e que já gastou muito dinheiro — até Lost — cliente que tem muito tempo que não compra, gastou pouco e que utilizou poucas vezes nosso serviço.
 
-**Alguns insights:**
 
-Com as informações acima a respeito dos clusters, podemos gerar alguns insights para atigir algumas metas:
+O cálculo para saber qual segmento do seu cliente é bem simples. Primeiro, você irá pegar o score de R do seu comprador. Em seguida, você irá tirar uma média entre o score F e de M, ou ira utilizar apenas um dele dependendo do seu problema, este é o nosso caso. Esses dois resultados juntos cairão dentro de um dos grupos abaixo. Confira:
 
-    - Para trazer os clientes do grupo "need_atention" de volta a compras, podemos focar em promoções por compras na loja ou pela internet, visto que este grupo tende a aceitar mais promoções, e compras pela loja e internet são os meios de compras mais comuns nesse grupo.
-    
-    - Podemos usar da mesma idéia para manter ou aumentar as vendas do grupo de "basic_clients", visto que as caracteristicas do grupo em relação ao local da venda e também aos produtos mais comprados são muito semelhantes.
-    
-    - Visto que os cliente em potencial e os melhores clientes compram bastante por catálogo, podemos utilizar desse meio para conquistar de vez os clientes em potencial além de aumentar as vendas dos clientes mais fiéis.
-    
-    - Vemos que por algum motivo, quem compra frutas tende a comprar carnes também, desta maneira podemos pensar em um jeito de fazer uma compra alavancada.
-    
-    
-## Conclusão
+<p align="center">
+  <img src="https://miro.medium.com/max/700/1*bGkBVQ_V5_JadgNiyAgiiw.png">
+</p>
 
-Após toda nossa análise a respeitos dos clientes em geral, e as subdivisões criadas, extraímos algumas informações muito úteis a respeito dos nossos clientes e seus hábitos, podendo assim junto com o time de negócios ou de markenting da empresa buscar soluções e melhorias, assim como as sugeridas.
+E o quê significa cada segmento desse?
 
-Lembrando que a análise e divisão dos dados é tão profunda quanto podemos querer, desta forma cabe ao time em conjunto decidir a melhor maneira de dividir e analisar os dados pensando no problema em questão ou em questão as melhorias buscadas.
+<p align="center">
+  <img src="https://miro.medium.com/max/1234/1*oUKMc3gk53hccFX4YNeu1g.png">
+</p>
+
+
+**1. Champions:** Este grupo comprou algum produto de nossa empresa recentemente, e se considerarmos todos os outros clientes, eles são nossos principais compradores, significa que seu número de transações é o maior em comparação com nossos outros clientes.
+
+**2. Loyal Customers:** Se algum cliente está incluído neste grupo, isso significa que ele compra algo regularmente. Sua frequência e recência são bastante boas para nós.
+
+**3. Potential Loyalists:** Esse tipo de cliente são nossos clientes recentes com frequência média.
+
+**4. New customers:** Compraram algo mais recentemente. Mas sua frequência é realmente pequena. Daqui podemos deduzir que são os nossos novos clientes. Eles acabaram de visitar nosso site. Podemos oferecer-lhes algumas ofertas especiais de 'Bem-vindo'.
+
+**5. Promising:** Eles são compradores recentes, mas não compraram muito. Sua recência é um pouco maior do que novos clientes.
+
+**6. Need Atention:** A caracteristica deste grupo é que eles estão acima da média de recência e frequência. Nas próximas etapas veremos uma representação visual desses grupos, lá obviamente observaremos que esse grupo está no meio quando todos os clientes são considerados em termos de valores de 'frequência' e 'recência'. Isso significa que, se for dada atenção especial a esse grupo, eles podem estar nos grupos 'Fieis', 'Potencial fiel' ou até 'campeoes', caso contrário, eles podem estar nos grupos 'em risco', 'prestes a dormir' ou 'hibernando'. As decisões de ação que tomaremos podem mover esse grupo para grupos mais valiosos.
+
+**7. About to sleep:** Estão abaixo da recência e frequência médias. Podemos perdê-los se não forem reativados.
+
+**8. At risk:** Sua frequência está acima da média, mas eles não estão presentes há muito tempo, o que significa que não compraram recentemente. Precisamos trazê-los de volta.
+
+**9. Can't loose then:** Eles são nossos principais compradores, considerando todos os outros clientes, mas não visitam nosso site há muito tempo. Não devemos perder esse grupo. Porque o número de transações deles é muito alto. Temos de reconquistá-los, fazer-lhes ofertas especiais e fazê-los sentir-se valiosos. Além disso, podemos realizar uma pesquisa para esse grupo para investigar por que eles não estão presentes por muito tempo, é anormal porque a frequência deles é a maior entre todos os clientes.
+
+**10. Hibernating:** Sua última compra foi há muito tempo e um possuem baixo número de compras. Podemos perdê-los.
+
+
+# Planejamento do Projeto
+Utilizei o canvas abaixo para melhor organização do projeto:
+<p align="center">
+  <img src="">
+</p>
+
+# Ferramentas
+
+# Relatório Análise
+Durante o processo, nós analisamos os dados de diversos angulos e levantamos algumas hipóteses a respeito dos nossos clientes. Abaixo se encontra um breve relatório constando todas as observações e insights retirados da análise:
+
+# Resultados
+
+# Conclusão
+
+# Próximos Passos
+
+# Referências
+
