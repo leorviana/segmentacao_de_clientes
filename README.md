@@ -1,4 +1,4 @@
-# All-In - Segmentação de Clientes
+# All In - Segmentação de Clientes
 
 A empresa All In é uma empresa de franquias Delicatesses. Delicatesse é uma loja que vende comidas finas e iguarias. Especializada em comidas exóticas, raras e de difícil preparo.
 Os principais produtos da All In são vinhos, carnes, certos peixes, doces e guloseimas e o diferencial, você pode comprar certas peças de ouro.
@@ -38,15 +38,10 @@ Tendo as três pontuações de R, F e M do cliente, é hora de classificá-lo de
 O cálculo para saber qual segmento do seu cliente é bem simples. Primeiro, você irá pegar o score de R do seu comprador. Em seguida, você irá tirar uma média entre o score F e de M, ou ira utilizar apenas um dele dependendo do seu problema, este é o nosso caso. Esses dois resultados juntos cairão dentro de um dos grupos abaixo. Confira:
 
 <p align="center">
-  <img src="https://miro.medium.com/max/700/1*bGkBVQ_V5_JadgNiyAgiiw.png">
-</p>
-
-E o quê significa cada segmento desse?
-
-<p align="center">
   <img src="https://miro.medium.com/max/1234/1*oUKMc3gk53hccFX4YNeu1g.png">
 </p>
 
+E o quê significa cada segmento desse?
 
 **1. Champions:** Este grupo comprou algum produto de nossa empresa recentemente, e se considerarmos todos os outros clientes, eles são nossos principais compradores, significa que seu número de transações é o maior em comparação com nossos outros clientes.
 
@@ -183,17 +178,58 @@ Durante o processo, nós analisamos os dados de diversos angulos e levantamos al
 </p>
 
 
-
-
-
-
-
-
 # Resultados
+Após a modelagem, 2233 clientes foram separados entre os 10 grupos definidos anteriormente. Com esta abordagem a equipe de marketing será capaz de tomar decisões táticas, identificar e segmentar rapidamente os usuários em grupos homogêneos e direcioná-los com estratégias de marketing diferenciadas e personalizadas. Isso, por sua vez, melhora o engajamento e a retenção do usuário.
+
+Após a segmentação, os nossos clientes ficaram divididos da seguinte maneira:
+<p align="center">
+  <img src="">
+</p>
+
+
+    hibernando            16.30%
+    em_risco              16.12%
+    potenciais_fieis      15.54%
+    fieis                 15.49%
+    prestes_a_dormir       8.55%
+    campeoes               7.52%
+    n_podem_perder         7.03%
+    novos_consumidores     4.97%
+    promissores            4.93%
+    precisam_atencao       3.54%
+
+Com isso, a equipe terá informações suficientes para saber quais são os clientes que devem ser fidelizados e recompensados — Champions e Loyal Customers — ; quem precisa ser conquistado para continuar comprando — Potential Loyalist e New Customer — ; e até quem precisa ser resgatado antes que deixem de comprar em nossa loja — At Risk e Can’t Lose Them.
 
 # Conclusão
+Após todo o processo conseguimos separar nossos clientes devidamente entre os 10 grupos e agora somos capazes de tomar melhores decisões, se comunicar melhor com o cliente e assim rete-los, abaixo listo algumas dicas acionáveis para cada grupo:
+
+**Champions ->** Recompensa-los. Podem ser os primeiros a adotar novos produtos. Irão promover a marca.
+
+**Loyal Customers ->** Upselling de produtos de maior valor. Pedir avaliações. Envolve-los.
+
+**Potential Loyalist ->** Oferecer adesão/programa de fidelidade, recomendar outros produtos.
+
+**Recent Customers ->** Fornecer suporte, dar a eles acesso antecipado, comecar a construir relacionamentos.
+
+**Promising ->** Criar reconhecimento da marca, oferecer avaliações gratuitas
+
+**Need Attention ->** Fazer ofertas por tempo limitado, recomendar com base em compras anteriores. Reativa-los.
+
+**About To Sleep ->** Compartilhar recursos valiosos, recomendar produtos populares com desconto, reconectar com eles.
+
+**At Risk ->** Enviar e-mails personalizados para se reconectar, oferecer renovações, fornecer recursos extras.
+
+**Can’t Lose Them ->** Conquista-los de volta por meio de renovações ou produtos mais novos, não os perder para a concorrência, conversar com eles.
+
+**Hibernating ->** Oferecer outros produtos relevantes e descontos especiais. Recriar o valor da marca.
+
 
 # Próximos Passos
+Para um segundo ciclo desta solução, poderemos clusterizar usando algum método de ML, assim incluiremos outras variáveis que podem ser muito úteis na hora de agrupar os clientes, como seus hábitos de consumo.
 
 # Referências
 
+Vasconcellos, Paulo. "O que é RFM e como aplicá-lo ao seu time de Customer Success". **Medium**. Disponível em: <https://medium.com/maxmilhas-tech/o-que-%C3%A9-rfm-e-como-aplic%C3%A1-lo-ao-seu-time-de-customer-service-b9c35817ed01>
+
+
+"RFM Analysis For Successful Customer Segmentation". **PUTLER**. Disponível em: <https://www.putler.com/rfm-analysis/>
