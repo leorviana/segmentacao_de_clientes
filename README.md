@@ -26,6 +26,11 @@ Existem diversos métodos para se agrupar uma base de clientes e entre eles exis
 
 **3. Monetary (Valor monetário)**: O valor monetário, por fim, indica qual é o valor agregado por esse cliente, em nosso caso, nos não iremos utilzar esta ultima informação, pois ela esta altamente relacionada com a frequência.
 
+# Planejamento do Projeto
+Utilizei o canvas abaixo para melhor organização do projeto:
+<p align="center">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/Canvas%20DS%20RFM.png">
+</p>
 
 # Modelo RFM
 
@@ -63,14 +68,7 @@ E o quê significa cada segmento desse?
 
 **10. Hibernating:** Sua última compra foi há muito tempo e um possuem baixo número de compras. Podemos perdê-los.
 
-
-# Planejamento do Projeto
-Utilizei o canvas abaixo para melhor organização do projeto:
-<p align="center">
-  <img src="">
-</p>
-
-# Ferramentas
+# Ferramentas Utilizadas
  - Python 3.8
  - Jupyter Notebook
  - Método CRISP-DM para gerenciamento de projeto de dados.
@@ -82,99 +80,81 @@ Durante o processo, nós analisamos os dados de diversos angulos e levantamos al
 
 ### Apenas 11% dos nossos clientes não são graduados.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/graduados.png">
 </p>
 
 ### 64% dos clientes possuem um parceiro.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/marital_status.png">
 </p>
 
 ### 70% dos clientes possuem pelo menos 1 filho.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/filhos.png">
 </p>
 
-### A média salarial de nossos clientes é de 52k dólares por ano.
-<p align="center">
-  <img src="">
-</p>
 
 ## Relacionamento com a Empresa
 
-### O tempo médio de nossos clientes como clientes é de 18 meses.
-<p align="center">
-  <img src="">
-</p>
-
 ### De todos os 2240 cadastrados em nossa base, apenas 21 deles realizaram algum tipo de reclamação formal.
 <p align="center">
-  <img src="">
-</p>
-
-### O gasto médio por compra é de 30 dólares.
-<p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/complain.png">
 </p>
 
 ### Em média nossos clientes realizaram um total de 12 compras conosco em seu tempo de vida atual, mas existe um pico de clientes que realizaram apenas 5 compras.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/total_compras.png">
 </p>
 
 ## Hábitos de Consumo
 
 ### Os clientes compram em média mais pela loja fisica, depois pela internet e pouquissimas vezes compram pelo catálogo.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/meios.png">
 </p>
 
 ### Dentre os produtos oferecidos, o que mais gera receita são os vinhos.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/vinhos.png">
 </p>
 
-### Em média, cada cliente já comprou 2x em promoções.
-<p align="center">
-  <img src="">
-</p>
 
 ## Análise Bivariada
 
 ### H1: Clientes com elevados graus de instrução ganham mais.
 **Verdadeiro:** Essa diferença salarial se aplica apenas entre as pessoa que possuem algum nível de graduação e as que não possuem, mas entre pessoas graduadas e pós-graduadas não temos muita diferença.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/grau_salario.png">
 </p>
 
 ### H2: Clientes em relacionamentos gastam mais.
 **Falso:** Não existe relação entre o estado civil e o total gasto. O teste ANOVA realizado logo após o gráfico nos confirma isto.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/relacionameto_gasto.png">
 </p>
 
 ### H3: Clientes que ganham mais gastam mais.
 **Verdadeiro:** O total gasto possui uma relação quase exponencial com o salario(excluindo alguns outliers). Com uma correlação de 0.79.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/gasto_salario.png">
 </p>
 
 ### H4: Clientes antigos possuem um gasto médio por compra maior.
 **Falso:** Não existe nenhuma relação entre o tempo como cliente e o gasto médio.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/tempo_gasto_medio.png">
 </p>
 
 ### H5: Clientes que possuem filhos gastam mais.
 **Falso:** Na realidade é bem o contrário, clientes que não possuem filhos gastam 40% a mais do que clientes sem filho.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/gasto_filhos.png">
 </p>
 
 ### H6: Clientes compram mais por promoções costumam comprar menos frequentemente.
 **Falso:** Não existe relação significativa entre o numero de compras em promoções e a quantidade de compras.
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/promo_frequencia.png">
 </p>
 
 
@@ -183,7 +163,7 @@ Após a modelagem, 2233 clientes foram separados entre os 10 grupos definidos an
 
 Após a segmentação, os nossos clientes ficaram divididos da seguinte maneira:
 <p align="center">
-  <img src="">
+  <img src="https://github.com/leorviana/segmentacao_de_clientes/blob/main/images/grafico_rfm.png">
 </p>
 
 
