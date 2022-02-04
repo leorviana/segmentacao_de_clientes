@@ -158,7 +158,7 @@ Durante o processo, nós analisamos os dados de diversos angulos e levantamos al
 </p>
 
 
-# Resultados
+# Resultados RFM
 Após a modelagem, 2233 clientes foram separados entre os 10 grupos definidos anteriormente. Com esta abordagem a equipe de marketing será capaz de tomar decisões táticas, identificar e segmentar rapidamente os usuários em grupos homogêneos e direcioná-los com estratégias de marketing diferenciadas e personalizadas. Isso, por sua vez, melhora o engajamento e a retenção do usuário.
 
 Após a segmentação, os nossos clientes ficaram divididos da seguinte maneira:
